@@ -1,0 +1,51 @@
+/*? 1170px */
+@media screen and (max-width: 1170px) {
+    .container {
+        width: 95%;
+    }
+
+}
+/*? 1080px */
+@media screen and (max-width: 1080px) {
+    .advantage {
+        width: 240px;
+    }
+}
+
+/*? 800px */
+@media screen and (max-width: 800px) {
+    .container {
+        width: 90%;
+    }
+    .advantage {
+        width: 200px;
+    }
+}
+/*? 600px */
+@media screen and (max-width: 600px) {
+    header .logoButtons {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+/*? 320px */
+@media screen and (max-width: 320px) {
+    h1 {
+        font-size: calc(35px + (65 + 65*0.7)*((100vw - 320px)/1920));
+    }
+    h2 {
+        font-size: calc(20px + (20 + 20*0.7)*((100vw - 320px)/1920));
+    }
+    h3 {
+        font-size: calc(15px + (15 + 15*0.7)*((100vw - 320px)/1920));
+    }
+    h4 {
+        font-size: calc(15px + (5 + 5*0.7)*((100vw - 320px)/1920));
+    }
+    p {
+        font-size: calc(10px + (5+5*0.7)*((100vw - 320px)/1920));
+    }
+
+   
+}

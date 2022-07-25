@@ -1,0 +1,291 @@
+/*! Підключені шрифти */
+@font-face {
+    font-family: Neucha;
+    src: url("/font/Oswald-VariableFont_wght.ttf");
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+    font-family: 'Oswald', sans-serif;
+}
+/* для того, щоб float елементи розпізнавались */
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+.container {
+    width: 1180px;
+    height: 100%;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+h1 {
+    font-weight: 700;
+    /* font-size: 60px; */
+    font-size: calc(20px + 40*(100vw/1920));
+    line-height: 1.5em;
+    text-align: center;
+    letter-spacing: 0.01em;
+}
+h2 {
+    font-weight: 400;
+    /* font-size: 40px; */
+    font-size: calc(20px + 20*(100vw/1920));
+    text-align: center;
+    /* color: #f5f5f5; */
+}
+h3 {
+    font-weight: 700;
+    /* font-size: 30px; */
+    font-size: calc(15px + 15*(100vw/1920));
+    text-align: center;
+    color: #1D1E1E;
+}
+h4 {
+    font-weight: 700;
+    /* font-size: 20px; */
+    font-size: calc(15px + 5*(100vw/1920));
+    text-align: center;
+}
+p {
+    font-weight: 400;
+    /* font-size: 15px; */
+    font-size: calc(10px + 5*(100vw/1920));
+    color: #1D1E1E;
+}
+button {
+    width: 8em;
+    font-family: 'Oswald', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.55em;
+    letter-spacing: 0.02em;
+    color: #FFFFFF;
+    border-radius: 2em;
+    border: none;
+    padding: 0.5em 1em;
+    box-sizing: border-box;
+    box-shadow: none;
+    text-decoration: none;
+    background-color: #818a91;
+    text-align: center;
+    cursor: pointer;
+    text-transform: uppercase;
+    margin: 0.3em auto;
+}
+
+/*? ВІКНО __index.php__________________________________ */
+.header-index {
+    background: #080A0B;
+}
+.header-index .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-index .headerLogo {
+    display: flex;
+    align-items: center;
+}
+.header-index .headerLogo img {
+    width: 50px;
+    margin: 0.5em auto;
+}
+.header-index .headerLogo .logoWords {
+    margin-left: 2em;
+}
+.header-index .headerLogo .logoWords h4 {
+    font-size: 20px;
+    font-weight: 700;
+    color: #f5f5f5;
+    letter-spacing: 0.02em;
+    margin: 0;
+}
+.header-index .headerLogo .logoWords p {
+    color: #f5f5f5;
+    letter-spacing: 0.15em;
+}
+
+.btnEnter {
+    background-color: #ffff00;
+    color: #000000;
+}
+.btnEnter:hover {
+    background-color: #000000;
+    color: #f5f5f5;
+    border: 2px solid #ffff00;
+}
+.btnAddUser {
+    background-color: #ffff;
+    color: #000000;
+}
+.btnAddUser:hover {
+    background-color: #000000;
+    color: #f5f5f5;
+    border: 2px solid;
+}
+main .main-picture {
+       margin: 2em auto;
+    text-align: center; 
+}
+main .main-picture img {
+    width: 20%;
+    height: fit-content;
+}
+main .main-about .container {
+    justify-content: space-between;
+}
+main .main-about .advantages-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 2em;
+}
+
+
+.advantage {
+    width: 300px;
+    height: fit-content;
+    background-color: #FFFFFF;
+    border-radius: 25px;
+    margin: 0 1em;
+}
+.advantage-title,
+.advantage-description {
+display: flex;
+flex-direction: column;
+padding: 10px 14px; 
+}
+
+.advantage-title {
+    row-gap: 5px;
+    position: relative;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #2A2A2A;
+    border-radius: 25px 25px 0 25px;
+}
+.advantage-title h4 {
+color: #f5f5f5;
+margin: 0 0.3em 0.3em 0.3em;
+letter-spacing: 0.02em;
+}
+
+.overlay::before,
+.overlay::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: -40px;
+    height: 40px;
+    width: 40px;
+    background-color: #2A2A2A;
+}
+.overlay::after {
+    border-radius: 0 25px 0 0;
+    background-color: #FFFFFF;
+}
+.advantage-description {
+    row-gap: 5px;
+    padding: 10px 40px 25px 10px;
+}
+
+
+/*? ВІКНО __login.php__________________________________ */
+.form-enter {
+    text-align: center;
+    max-width: 320px;
+    margin: 0 auto;
+    padding: 15px;
+}
+
+.form-enter input {
+    margin: 0.5em auto;
+    border-radius: 2em;
+    padding: 0.5em 1em;
+    box-sizing: border-box;
+    box-shadow: none;
+    text-decoration: none;
+    border: 2px solid #818a91;
+}
+.form-enter button {
+    text-transform: uppercase;
+    width: fit-content;
+}
+.form-enter a {
+    text-decoration: none;
+    color: #818a91;
+}
+.form-enter a:hover {
+color: #000000;
+}
+
+/*? ВІКНО __main.php__________________________________ */
+.header-main {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 100;
+}
+.header-main::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: #1D1E1E;
+}
+.header-body {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+}
+.main-content {
+padding-top: 100px;
+}
+
+/*? ВІКНО __incom.php__________________________________ */
+.content-form-enter {
+    width: 100%;
+    height: 100vw;
+    background-color: #2A2A2A;
+}
+
+.content-form-enter .container .form-enter {
+    background-color: #f5f5f5;
+}
+
+.content-form-enter input,
+.content-form-enter select {
+    width: 200px;
+}
+
+.form-enter select {
+    margin: 0.5em auto;
+    border-radius: 2em;
+    padding: 0.5em 1em;
+    box-sizing: border-box;
+    box-shadow: none;
+    text-decoration: none;
+    border: 2px solid #818a91;
+}
+.invalid-feedback {
+    display: none;
+    width: 100%;
+    margin-top: 0.25rem;
+    font-size: .875em;
+    color: #dc3545;
+}
