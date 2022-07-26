@@ -11,11 +11,12 @@ require ($_SERVER['DOCUMENT_ROOT'] . '/partials/header.php');
                 </div>
                 <div class="calculations">
                    
-                    <button class="income">
+                    <button id = "myBtn" class="income open-button">
                         <span class="myButton-label">
                             <div class="union">
                                 <img src="/img/plus.svg" alt="union">
                                 <p>Дохід</p>
+                            
                             </div>
                         </span>
                     
@@ -133,29 +134,70 @@ require ($_SERVER['DOCUMENT_ROOT'] . '/partials/header.php');
                         <div></div>
                     </div>
                 </div>
-
-
-
-
-
-
-
-
-
-
-
-
             </div>
-        
-        
-        
-        
-        
-        
         </div>
+    </div>
 </div>
+<div id="myModal" class="modal">
+      <div class="modal-content modal-plus">
+            <div class="modal-header">
+                <span class="close">&times;</span>
+                <h2>Новий дохід</h2>
+            </div>
+            <div class="modal-body">
+                <div class="row-one">
+                    <p>на рахунок</p>
+                </div>
+                <div class="row-two">
+                    <div class="row-sum">
+                        <p>Сума</p>
+                    </div>
+                    <div class="row-val">
+                        <p>Грн</p>
+                    </div>
+                </div>
+                <div class="row-three">
+                    <p>Категорія</p>
+                </div>
+                <div class="row-calendar">
+                    <p>Дата</p>
+                </div>
+           
+            </div>
+            <div class="modal-footer">
+                <button class="btn-plus">Додати дохід</button>
+            </div>
+      </div>
+      <!-- <div class="modal-content modal-minus">
+            <div class="modal-header">
+                <span class="close">&times;</span>
+                <h2>Нова витрата</h2>
+            </div>
+            <div class="modal-body">
+                <div class="row-one">
+                    <p>на рахунок</p>
+                </div>
+                <div class="row-two">
+                    <div class="row-sum">
+                        <p>Сума</p>
+                    </div>
+                    <div class="row-val">
+                        <p>Грн</p>
+                    </div>
+                </div>
+                <div class="row-three">
+                    <p>Категорія</p>
+                </div>
+                <div class="row-calendar">
+                    <p>Дата</p>
+                </div>
+           
+            </div>
+            <div class="modal-footer">
+                <button class="btn-minus">Додати витрату</button>
+            </div>
+      </div> -->
 </div>
-
 
 
 
