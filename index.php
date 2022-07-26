@@ -1,6 +1,7 @@
 <?php 
     require("partials/header.php");
 ?>
+
 <header class="header-index">
         <div class="container">
             <div class="headerLogo">
@@ -11,8 +12,8 @@
                 </div>
             </div>
             <div class="logoButtons">
-                <button onclick="location.href='/login.php'" class="btnEnter">Вхід</button>
-                <button onclick="location.href='/register.php'" class="btnAddUser">Реєстрація</button>
+                <button onclick="location.href='/login.php'" class="btnEnter btnIndex">Вхід</button>
+                <button onclick="location.href='/register.php'" class="btnAddUser btnIndex">Реєстрація</button>
             </div>
             
         </div>

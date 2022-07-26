@@ -58,7 +58,7 @@ p {
     font-size: calc(10px + 5*(100vw/1920));
     color: #1D1E1E;
 }
-button {
+.btnIndex {
     width: 8em;
     font-family: 'Oswald', sans-serif;
     font-size: 16px;
@@ -226,6 +226,12 @@ letter-spacing: 0.02em;
 }
 .form-enter a:hover {
 color: #000000;
+}
+.notification {
+        padding-top: 1em;
+}
+.notification h4 {
+    color: #dc3545;
 }
 
 /*? ВІКНО __main.php__________________________________ */

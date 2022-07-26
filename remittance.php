@@ -38,7 +38,7 @@
                 <input type="date" id="date" name="date"/>
                 </div>
                 
-                <button class="btnEnter" type="submit">Перемістити</button>
+                <button class="btnEnter btnIndex" type="submit">Перемістити</button>
             </form>
         </div>
 

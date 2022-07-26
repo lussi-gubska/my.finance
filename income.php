@@ -38,7 +38,7 @@
                 <input type="date" id="date" name="date"/>
                 </div>
                 
-                <button class="btnEnter" type="submit">Додати дохід</button>
+                <button class="btnEnter btnIndex" type="submit">Додати дохід</button>
             </form>
         </div>
 

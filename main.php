@@ -14,10 +14,10 @@
         <span>бургер)))</span>
       </div>
       <div class="logoButtons">
-          <button onclick="location.href='/income.php'" class="btnIncome">Дохід</button>
-          <button onclick="location.href='/expence.php'" class="btnExpense">Витрата</button>
-          <button onclick="location.href='/remittance.php'" class="btnRemittance">Переказ</button>
-          <button onclick="location.href='/analytics.php'" class="btnAnalytics">Аналітика</button>
+          <button onclick="location.href='/income.php'" class="btnIncome btnIndex">Дохід</button>
+          <button onclick="location.href='/expence.php'" class="btnExpense btnIndex">Витрата</button>
+          <button onclick="location.href='/remittance.php'" class="btnRemittance btnIndex">Переказ</button>
+          <button onclick="location.href='/analytics.php'" class="btnAnalytics btnIndex">Аналітика</button>
       </div>
       <div class="logout-icon">
         <span>іконка-виходу</span>
