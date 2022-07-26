@@ -1,23 +1,32 @@
 <?php 
     require("partials/header.php");
 
-    if(!empty($_POST)) {
-      
-        $sql = "INSERT INTO `users`(`email`, `password`) VALUES ('" . $_POST['email'] . "','" . $_POST['password'] . "')";
-        if (mysqli_query($conn, $sql)) {
+
+  if (isset($_REQUEST['doGo'])) {
+    if ($_REQUEST['password'] !== $_REQUEST['password_rep']) {
+      echo 'Пароль не співпадае';
+        }else if(!empty($_POST)) {
+              $sql = "INSERT INTO `users`(`email`, `password`) VALUES ('" . $_POST['email'] . "','" . $_POST['password'] . "')";
+              if (mysqli_query($conn, $sql)) {
+                
 ?>
+  
+
 <div class="notification">
   <h4> 
 <?php 
-            echo "Ви успішно зареєстровані<br/>";
-            header('Refresh: 3; URL=/main.php');
-            echo 'Через 5 секунд Ви будете <br> автоматично перенаправлені до додатку!';
-        } else {
-            echo "Error: " . $sql . "<br>" . mysqli_error($conn);
-        }
+echo "Ви успішно зареєстровані<br/>";
+                header('Refresh: 3; URL=/main.php');
+                echo 'Через 5 секунд Ви будете <br> автоматично перенаправлені до додатку!';
+                } else {
+                    echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+                }
         mysqli_close($conn);
-    }
+      }
+    
+  }
 ?>
+
 </h4>
 </div>
 
@@ -45,6 +54,8 @@
     <button class="btnEnter btnIndex" name="doGo" type="submit">зареєструватись</button>
   </form>
 </main>
+
+
 
 <?php 
   require('partials/footer.php');
