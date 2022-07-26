@@ -11,32 +11,32 @@ require ($_SERVER['DOCUMENT_ROOT'] . '/partials/header.php');
                 </div>
                 <div class="calculations">
                    
-                    <button id = "myBtn" class="income open-button">
-                        <span class="myButton-label">
-                            <div class="union">
-                                <img src="/img/plus.svg" alt="union">
-                                <p>Дохід</p>
-                            
-                            </div>
-                        </span>
-                    
-                    </button>
-                        <button class="consumption">
-                        <span class="myButton-label">
-                            <div class="stroke">
-                                <img src="/img/minus.svg" alt="stroke">
-                                <p>Витрата</p>
-                            </div>
-                        </span>
+                        <button id="myBtnplus" class="income">
+                            <span class="myButton-label">
+                                <div class="union">
+                                    <img src="/img/plus.svg" alt="union">
+                                    <p>Дохід</p>
+                                
+                                </div>
+                            </span>
                         
-                    </button>
-                        <button class="translation">
-                        <span class="myButton-label">
-                            <div class="transfer">
-                                <img src="/img/perekaz.svg" alt="transfer">
-                            <p>Переказ</p>
-                        </div>
-                    </span>
+                        </button>
+                        <button id="myBtnminus" class="consumption">
+                            <span class="myButton-label">
+                                <div class="stroke">
+                                    <img src="/img/minus.svg" alt="stroke">
+                                    <p>Витрата</p>
+                                </div>
+                            </span>
+                        
+                        </button>
+                        <button id="myBtnperekaz" class="translation">
+                            <span class="myButton-label">
+                                <div class="transfer">
+                                    <img src="/img/perekaz.svg" alt="transfer">
+                                    <p>Переказ</p>
+                                </div>
+                            </span>
                         </button>
                 </div>
                 <div class="cabinet">
@@ -52,7 +52,7 @@ require ($_SERVER['DOCUMENT_ROOT'] . '/partials/header.php');
                     <p class="amount">₴ 0
                         <span style="font-size: 16px;">.0</span></p>
                 
-                <hr>
+                    <hr>
                     <div class="check">
                         <p class="check-text">Мої рахунки</p>
                         <p class="check-edit" >Редагувати</p>
@@ -79,7 +79,7 @@ require ($_SERVER['DOCUMENT_ROOT'] . '/partials/header.php');
                             </div>
                         </div>
                     </div>
-                <hr>
+                    <hr>
                     <div class="total">
                         <p class="total-name">Всього на рахунках</p>
                         <p class="total-amount">₴ 0<span style="font-size: 10px;">.0</span></p>
@@ -90,10 +90,10 @@ require ($_SERVER['DOCUMENT_ROOT'] . '/partials/header.php');
                 <div class="nav-header">
                     <div class="header-list">
                         <div class="list-platezh">
-                        <p>Платежі</p>
+                            <p>Платежі</p>
                         </div>
                         <div class="list-analitic">
-                        <p>Аналітика</p>
+                         <p>Аналітика</p>
                         </div>
                     </div>
                 </div>
@@ -106,14 +106,14 @@ require ($_SERVER['DOCUMENT_ROOT'] . '/partials/header.php');
                         </svg>
                     </span>
                     </button>
-                <div class="find">
-                    <div class="placeholder">
-                        <div class="find-container">
-                        <img src="/img/search.svg" alt="search">
-                        <p>Пошук по рахунках, клієнтах, коментарях</p>
+                    <div class="find">
+                        <div class="placeholder">
+                            <div class="find-container">
+                                <img src="/img/search.svg" alt="search">
+                                <p>Пошук по рахунках, клієнтах, коментарях</p>
+                            </div>
                         </div>
-                </div>
-                </div>
+                    </div>
                 </div>
                 <div class="body-table">
                     <div class="header-table">
@@ -130,74 +130,113 @@ require ($_SERVER['DOCUMENT_ROOT'] . '/partials/header.php');
                             <p>Категорія</p>
                         </div>
                     </div>
-                    <div class="change-data">
-                        <div></div>
-                    </div>
+                    <div class="change-data"></div>
                 </div>
             </div>
         </div>
     </div>
 </div>
-<div id="myModal" class="modal">
-      <div class="modal-content modal-plus">
-            <div class="modal-header">
-                <span class="close">&times;</span>
-                <h2>Новий дохід</h2>
-            </div>
-            <div class="modal-body">
-                <div class="row-one">
-                    <p>на рахунок</p>
+    <div>
+        <div id="myModalplus" class="modal">
+            <div class="modal-content modal-plus">
+                <div class="modal-header">
+                    <span class="close">&times;</span>
+                    <h2>Новий дохід</h2>
                 </div>
-                <div class="row-two">
-                    <div class="row-sum">
-                        <p>Сума</p>
+                <div class="modal-body">
+                    <div class="row-one">
+                        <p>на рахунок</p>
                     </div>
-                    <div class="row-val">
-                        <p>Грн</p>
+                    <div class="row-two">
+                        <div class="row-sum">
+                            <p>Сума</p>
+                        </div>
+                        <div class="row-val">
+                            <p>UAN (₴)</p>
+                        </div>
                     </div>
-                </div>
-                <div class="row-three">
-                    <p>Категорія</p>
-                </div>
-                <div class="row-calendar">
-                    <p>Дата</p>
-                </div>
-           
-            </div>
-            <div class="modal-footer">
-                <button class="btn-plus">Додати дохід</button>
-            </div>
-      </div>
-      <!-- <div class="modal-content modal-minus">
-            <div class="modal-header">
-                <span class="close">&times;</span>
-                <h2>Нова витрата</h2>
-            </div>
-            <div class="modal-body">
-                <div class="row-one">
-                    <p>на рахунок</p>
-                </div>
-                <div class="row-two">
-                    <div class="row-sum">
-                        <p>Сума</p>
+                    <div class="row-three">
+                        <p>Категорія</p>
                     </div>
-                    <div class="row-val">
-                        <p>Грн</p>
+                    <div class="row-calendar">
+                        <p>Дата</p>
                     </div>
                 </div>
-                <div class="row-three">
-                    <p>Категорія</p>
+                <div class="modal-footer">
+                    <button class="btn-plus">Додати дохід</button>
                 </div>
-                <div class="row-calendar">
-                    <p>Дата</p>
+            </div> 
+        </div>
+         
+        <div id="myModalminus" class="modal">
+            <div class="modal-content modal-minus">
+                <div class="modal-header">
+                    <span class="close">&times;</span>
+                    <h2>Нова витрата</h2>
                 </div>
-           
+                <div class="modal-body">
+                    <div class="row-one">
+                        <p>з рахунку</p>
+                    </div>
+                    <div class="row-two">
+                        <div class="row-sum">
+                            <p>Сума</p>
+                        </div>
+                        <div class="row-val">
+                            <p>UAN (₴)</p>
+                        </div>
+                    </div>
+                    <div class="row-three">
+                        <p>Категорія</p>
+                    </div>
+                    <div class="row-calendar">
+                        <p>Дата</p>
+                    </div>
+            
+                </div>
+                <div class="modal-footer">
+                    <button class="btn-minus">Додати витрату</button>
+                </div>
             </div>
-            <div class="modal-footer">
-                <button class="btn-minus">Додати витрату</button>
+        </div>
+
+        <div id="myModalperevod" class="modal">
+            <div class="modal-content modal-minus">
+                <div class="modal-header">
+                    <span class="close">&times;</span>
+                    <h2>Переказ</h2>
+                </div>
+                <div class="modal-body">
+                    <div class="row-one">
+                            <p>з рахунка</p>
+                    </div>
+                    <div class="row-one">
+                            <p>на рахунок</p>
+                    </div>
+                    <div class="row-two">
+                        <div class="row-sum">
+                            <p>Сума</p>
+                        </div>
+                           <div class="row-val">
+                            <p>UAN (₴)</p>
+                        </div>
+                    </div>
+                    <div class="row-three">
+                            <p>Категорія</p>
+                    </div>
+                    <div class="row-calendar">
+                            <p>Дата</p>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn-perekaz">Переказати</button>
+                </div>
             </div>
-      </div> -->
-</div>
+        </div>
+
+
+    </div>    
+
 
 
 
