@@ -53,12 +53,25 @@ window.onclick = function(event) {
     if (event.target == modalperevod) {
         modalperevod.style.display = "none";
     }
+    if (event.target == menu) {
+       menu.style.display = "none";
+    }
+}
+
+var burger = document.querySelector(".burger");
+var menu = document.querySelector(".burger-left");
+
+burger.onclick = function() {
+    menu.style.display = "flex";
+
 }
 
 
+// var burger = document.querySelector(".burger");
+// var menu = document.querySelector(".fin-left");
 
-// window.onclick = function(event) {
-//     if (event.target == modalplus) {
-//         modalplus.style.display = "none";
-//     }
+// burger.onclick = function() {
+//     menu.style.display = "flex";
+//     menu.classList.add(".modal");
+
 // }

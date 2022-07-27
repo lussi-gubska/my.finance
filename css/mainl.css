@@ -28,6 +28,12 @@
     justify-content: space-between;
 }
 
+.burger {
+    display: none;
+    width: 25px;
+    height: 25px;
+}
+
 .calculations {
     height: fit-content;
     display: flex;
@@ -52,6 +58,9 @@
 
 }
 
+.burger-left {
+    display: none;
+}
 .income {
     width: 136px;
     height: 40px;
@@ -212,6 +221,10 @@
     padding: 0;
     border-top: 0.5px solid #000000;
     margin-bottom: 22px;
+}
+
+.my-label {
+    display: none;
 }
 
 .check {
@@ -394,7 +407,7 @@ margin-bottom: 20px;
     margin-right: 8px;
     border-radius: 12px;
     display: inline-flex;
-    width: 9em;
+    
 }
 
 
@@ -737,4 +750,36 @@ margin-bottom: 20px;
 #myModalminus,
 #myModalperevod {
     display: none;
+}
+
+@media (max-width: 1024px) {
+    .burger {
+        display: flex;
+        cursor: pointer;
+    } 
+    .fin-left {
+        display: none;
+        z-index: 99999999;
+    } 
+    .fin-right {
+        border-radius: 20px;
+    }
+    .union p {
+        display: none;
+    }
+    .stroke p {
+        display: none;
+    }
+    .translation p {
+        display: none;
+    }
+    .income,
+    .consumption,
+    .translation {
+        width: 83px;
+        height: 36px;
+    }
+    .my-label {
+        display: none;
+    }
 }
