@@ -21,7 +21,7 @@
 <main>
     <section class="main-picture">
         <div class="container">
-            <img src="img/image.png">
+            <img src="img/image.gif">
         </div>
     </section>
     <section class="main-about">

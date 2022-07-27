@@ -42,11 +42,11 @@
       <input type="password" name="password" placeholder="Пароль" required>
     </div>
 
-    <div class="checkbox">
+    <!-- <div class="checkbox">
       <label>
         <input type="checkbox" value="remember-me" id="rememberChkBox"> Запам’ятати мене
       </label>
-    </div>
+    </div> -->
     
     <button class="btnEnter btnIndex" type="submit">УВІЙТИ</button>
   </form>

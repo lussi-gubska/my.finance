@@ -1,3 +1,10 @@
+// Создание переменных
+var burger = document.querySelector(".burger img");
+var menu = document.querySelector(".bm-bg");
+
+var bmclose = document.querySelector(".mdi-icon");
+
+
 var modalplus = document.getElementById("myModalplus");
 var modalminus = document.getElementById("myModalminus");
 var modalperevod = document.getElementById("myModalperevod");
@@ -9,11 +16,17 @@ var btnperekaz = document.getElementById("myBtnperekaz");
 
 
 
-var span = document.getElementsByClassName("close")[0];
+// Открыть - закрыть бургерное меню
+burger.onclick = function() {
+    menu.style.display = "flex";
+}
+
+bmclose.onclick  = function() {
+    menu.style.display = "none";
+}
 
 
-
-
+// Открытие кнопок действий по клику 
 btnplus.onclick = function() {
     modalplus.style.display = "flex";
 }
@@ -27,20 +40,21 @@ btnperekaz.onclick = function() {
 }
 
 
+// Щелкаем по пустому пространству и окно закрывается 
+var span = document.getElementsByClassName("close")[0];
 
-
+span.onclick = function() {
+    menu.style.display = "none";
+}
 span.onclick = function() {
     modalplus.style.display = "none";
 }
-
 span.onclick = function() {
     modalminus.style.display = "none";
 }
-
 span.onclick = function() {
     modalperevod.style.display = "none";
 }
-
 
 
 window.onclick = function(event) {
@@ -54,24 +68,6 @@ window.onclick = function(event) {
         modalperevod.style.display = "none";
     }
     if (event.target == menu) {
-       menu.style.display = "none";
-    }
+        menu.style.display = "none";
+     }
 }
-
-var burger = document.querySelector(".burger");
-var menu = document.querySelector(".burger-left");
-
-burger.onclick = function() {
-    menu.style.display = "flex";
-
-}
-
-
-// var burger = document.querySelector(".burger");
-// var menu = document.querySelector(".fin-left");
-
-// burger.onclick = function() {
-//     menu.style.display = "flex";
-//     menu.classList.add(".modal");
-
-// }

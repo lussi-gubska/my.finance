@@ -1,29 +1,32 @@
 <?php 
     require("partials/header.php");
-
-
-  if (isset($_REQUEST['doGo'])) {
-    if ($_REQUEST['password'] !== $_REQUEST['password_rep']) {
-      echo 'Пароль не співпадае';
-        }else if(!empty($_POST)) {
-              $sql = "INSERT INTO `users`(`email`, `password`) VALUES ('" . $_POST['email'] . "','" . $_POST['password'] . "')";
-              if (mysqli_query($conn, $sql)) {
-                
-?>
-  
+?>        
 
 <div class="notification">
   <h4> 
-<?php 
-echo "Ви успішно зареєстровані<br/>";
-                header('Refresh: 3; URL=/main.php');
-                echo 'Через 5 секунд Ви будете <br> автоматично перенаправлені до додатку!';
-                } else {
-                    echo "Error: " . $sql . "<br>" . mysqli_error($conn);
-                }
-        mysqli_close($conn);
-      }
-    
+<?php        
+  if (isset($_REQUEST['doGo'])) {
+    /*Проверяем существует ли у нас такой пользователь в БД*/
+    $sql = "SELECT `email` FROM `users` WHERE `email` = '" . $_POST['email'] . "'";
+    $result = mysqli_query($conn, $sql);
+    $rows = $result->fetch_assoc();
+    if($rows > 0) {
+      echo 'email: '. $_POST['email'] .' вже зареєстрований!'; 
+      } else if ($_REQUEST['password'] !== $_REQUEST['password_rep']) {
+        echo 'Пароль не збігається';
+        }  
+
+        else if (!empty($_POST)) {
+                $sql = "INSERT INTO `users`(`email`, `password`) VALUES ('" . $_POST['email'] . "','" . $_POST['password'] . "')";
+                if (mysqli_query($conn, $sql)) {
+                  echo "Ви успішно зареєстровані<br/>";
+                  header('Refresh: 3; URL=/main.php');
+                  echo 'Через 5 секунд Ви будете <br> автоматично перенаправлені до додатку!';
+                  } else {
+                      echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+                  }
+          mysqli_close($conn);
+    }
   }
 ?>
 
@@ -45,11 +48,11 @@ echo "Ви успішно зареєстровані<br/>";
     <div>
       <input type="password" name="password_rep" placeholder="Підтвердження паролю" required>
     </div>
-    <div class="checkbox">
+    <!-- <div class="checkbox">
       <label>
         <input type="checkbox" value="remember-me" id="rememberChkBox"> Запам’ятати мене
       </label>
-    </div>
+    </div> -->
     
     <button class="btnEnter btnIndex" name="doGo" type="submit">зареєструватись</button>
   </form>

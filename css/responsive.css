@@ -20,7 +20,14 @@
     .advantage {
         width: 200px;
     }
+    main .main-picture {
+        margin: 1em auto;
+    }
+    main .main-picture img {
+        width: 30%;
+    }
 }
+
 /*? 600px */
 @media screen and (max-width: 600px) {
     .header-index .headerLogo .logoWords {
@@ -31,10 +38,12 @@
         font-size: 15px;
         line-height: 1em;
     }   
-
+    main .main-picture img {
+        width: 40%;
+    }
 }
-/*? 470px */
-@media screen and (max-width: 470px) {
+/*? 520px */
+@media screen and (max-width: 520px) {
 
     header .logoButtons {
         display: flex;
