@@ -1,11 +1,13 @@
 <?php 
-  if(isset($_SESSION["user_id"]) && $_SESSION["user_id"] != null) {
-    header("Location: /main.php");
-  } 
-?>
+    require("partials/header.php");
+?>        
 
-<?php 
-  require("partials/header.php");
+<div class="notification">
+  <h4> 
+    <!-- Если все поля заполненные
+    идёт сверка данных заполненных и тех что в базе данных
+    если совпадает - происходит авторизизация и начинается сессия пользователя в окне приложения-->
+<?php  
   if(!empty($_POST)) {
     $sql = "SELECT * FROM `users` 
     WHERE `email` = '" . $_POST['email'] . "' 
@@ -18,10 +20,6 @@
       header("Location: /main.php");
     } else {
       $_SESSION["user_id"] = null;
-?>
-<div class="notification">
-  <h4> 
-<?php 
       echo 'Заповніть вірно свої дані, <br> вказані при реєстрації!';
     }
   }

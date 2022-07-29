@@ -145,7 +145,6 @@ main .main-picture {
 }
 main .main-picture img {
     width: 20%;
-    height: auto;
 }
 main .main-about .container {
     justify-content: space-between;

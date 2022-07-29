@@ -667,7 +667,7 @@ margin-bottom: 20px;
     cursor: pointer;
 }
 
-.row-one {
+ .row-one { 
     height: 56px;
     display: flex;
     position: relative;
@@ -680,7 +680,7 @@ margin-bottom: 20px;
     justify-content: center;
 }
 
-.row-one p,
+/* .row-one p, */
 .row-sum p,
 .row-three p,
 .row-calendar p{
@@ -688,7 +688,6 @@ margin-bottom: 20px;
     color: gray;
 
 }
-
 
 .row-two {
     display: flex;
@@ -698,7 +697,8 @@ margin-bottom: 20px;
     justify-content: center;
 }
 
-.row-sum {
+.row-sum, 
+.row-account {
     display: flex;
     flex: 1;
     margin-right: 8px;
@@ -711,6 +711,7 @@ margin-bottom: 20px;
     border-radius: 12px;
     background-color: #EEF3F5;
     align-items: center;
+    padding-left: 10px;
 }
 
 .row-val {

@@ -10,18 +10,22 @@
     $sql = "SELECT `email` FROM `users` WHERE `email` = '" . $_POST['email'] . "'";
     $result = mysqli_query($conn, $sql);
     $rows = $result->fetch_assoc();
+    /*Если существует такой пользователь в БД то выдаем сообщение*/
     if($rows > 0) {
       echo 'email: '. $_POST['email'] .' вже зареєстрований!'; 
-      } else if ($_REQUEST['password'] !== $_REQUEST['password_rep']) {
+      } 
+    /*Если не существует такой пользователь в БД то проверяем совпадение пароля и повтора пароля*/
+      else if ($_REQUEST['password'] !== $_REQUEST['password_rep']) {
         echo 'Пароль не збігається';
         }  
-
+    /*Если не существует такой пользователь в БД и есть совпадение пароля и повтора пароля,
+    то идёт создание новой записи в БД о новом пользователе*/
         else if (!empty($_POST)) {
                 $sql = "INSERT INTO `users`(`email`, `password`) VALUES ('" . $_POST['email'] . "','" . $_POST['password'] . "')";
                 if (mysqli_query($conn, $sql)) {
                   echo "Ви успішно зареєстровані<br/>";
-                  header('Refresh: 3; URL=/main.php');
-                  echo 'Через 5 секунд Ви будете <br> автоматично перенаправлені до додатку!';
+                  header('Refresh: 3; URL=/login.php');
+                  echo 'Через 5 секунд Ви будете <br> автоматично перенаправлені до входу в особистий кабінет!';
                   } else {
                       echo "Error: " . $sql . "<br>" . mysqli_error($conn);
                   }
